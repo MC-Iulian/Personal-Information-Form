@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        form{
+            border: 1px solid black;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        input, select{
+            width: 100%;
+            height: 45px;
+            font-size: 1.5em;
+            background-color: lightslategray;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        button{
+            width: 100%;
+            height: 50px;
+            background-color: orange;
+            color: white;
+            font-size: 1.75em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+        }
+
+        #checks input{
+            width: 15%;
+        }
+
+        #checks{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Personal Information Form</h1>
+    <form action="#" method="post">
+        <label for="firstName">First</label>
+        <input type="text" id="firstName"><br/>
+
+        <label for="lastName">Last</label>
+        <input type="text" id="lastName" /><br/>
+
+        <label for="userEmail">Email</label>
+        <input type="email" id="userEmail" /><br/>
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="phone" id="phoneNumber" placeholder="###-###-###" />
+
+        <label for="department">Department</label>
+        <select id="department">
+            <option value="accounting">Accounting</option>
+            <option value="marketing">Marketing</option>
+            <option value="admin">Administration</option>
+            <option value="sales">Sales</option>
+            <option value="exec">Executive</option>
+        </select>
+        <div id="checks">
+            <!-- label for selecting multiple options -->
+        <label for="interests">Interests</label>
+        <br/><input type="checkbox" id="interests" value="sports">Sports
+        <br/><input type="checkbox" id="interests" value="Music">Music
+        <br/><input type="checkbox" id="interests" value="social action">Social Action
+        <br/><input type="checkbox" id="interests" value="cookong">Cooking
+            <!-- label for selecting a single option -->
+        <br/><label for="officeLocation">Office Location</label>
+        <br/><input type="radio" name="office" id="New York">New York
+        <br/><input type="radio" name="office" id="Chicago">Chicago
+        <br/><input type="radio" name="office" id="Las Vegas">Las Vegas
+        <br/><input type="radio" name="office" id="Seattle">Seattle
+        </div>
+            <!-- calendar -->
+        <br/><label for="doh">Date of Hire</label>
+        <input type="date" id="doh" />
+        <button type="submit">Submit Data</button>
+    </form>
+</body>
+</html>
